@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: account-route
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/accounts/**
+        - id: customer-route
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/customers/**
