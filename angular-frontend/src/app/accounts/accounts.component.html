@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-center">
+
+  <div class="card mt-5 w-75">
+    <div class="card-header">
+      Accounts table
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Account Type</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Currency</th>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Customer name</th>
+            <th scope="col">Customer email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let account of accounts">
+            <td >{{account.accountType}}</td>
+            <td >{{account.balance}}</td>
+            <td >{{account.currency}}</td>
+            <td >{{account.customerInfo.id}}</td>
+            <td >{{account.customerInfo.lastName}} {{account.customerInfo.firstName}}</td>
+            <td >{{account.customerInfo.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
